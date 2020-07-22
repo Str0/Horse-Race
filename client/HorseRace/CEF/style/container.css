@@ -1,0 +1,104 @@
+@font-face { font-family: "ka-1";
+             src: url("../file/font/FakeHopeFilled.ttf");
+}
+
+.horse 
+{
+	position: absolute; 
+	z-index: 3;
+}
+
+.horseInfo 
+{
+	font-family: "ka-1"; 
+	display: block;
+	position: absolute;
+	font-size: 1.2em;
+  	transform: rotate(30deg);
+	color: white; 
+	z-index: 3;
+}
+
+#Horse_1  /* Red Horse */
+{
+	filter: invert(17%) sepia(97%) saturate(7396%) hue-rotate(2deg) brightness(108%) contrast(115%);
+}
+
+#Horse_2 /* Green Horse */
+{
+	filter: invert(65%) sepia(97%) saturate(3720%) hue-rotate(82deg) brightness(120%) contrast(121%);
+}
+
+#Horse_3 /* Blue Horse */
+{
+	filter: invert(8%) sepia(99%) saturate(7285%) hue-rotate(248deg) brightness(99%) contrast(143%);
+}
+
+#Horse_4 /* Gold Horse */
+{
+	filter: invert(51%) sepia(97%) saturate(607%) hue-rotate(23deg) brightness(97%) contrast(103%);
+}
+
+#Horse_5 /* Pink Horse */
+{
+	filter: invert(15%) sepia(95%) saturate(3719%) hue-rotate(291deg) brightness(93%) contrast(120%);
+}
+
+#Horse_6 /* Black Horse */
+{
+	filter: invert(0%) sepia(4%) saturate(0%) hue-rotate(309deg) brightness(93%) contrast(107%);
+}
+
+.horseShadow 
+{
+	position: absolute; 
+  	z-index: 2;
+  	transform: scaleY(-0.5) skewX(20deg) ;
+  	filter: contrast(0%) blur(1px) brightness(0);
+  	opacity: 0.4;
+}
+
+.tile
+{
+	position: absolute;
+	background-size: 64px 64px;
+	background-repeat: repeat-x;
+	padding: 0; margin: 0;
+	z-index: 0;
+}
+
+.background 
+{
+	animation: filter-animation 5s infinite alternate-reverse;
+}
+
+.foreground
+{
+	z-index: 4;
+}
+
+.overlay
+{
+	position: absolute;
+	z-index: 99;
+}
+
+.static
+{
+	position: absolute;
+	z-index: 98;
+}
+
+@keyframes filter-animation {
+  0% {
+    filter: brightness(100%);
+  }
+  
+  50% {
+    filter: brightness(150%);
+  }
+  
+  100% {
+    filter: brightness(100%);
+  }
+}

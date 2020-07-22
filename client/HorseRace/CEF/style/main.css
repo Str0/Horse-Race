@@ -1,0 +1,22 @@
+body 
+{
+	overflow: hidden;
+	margin: 0; 
+	padding: 0;
+}
+
+.container
+{
+	position: fixed;
+	background: grey !important;  position:absolute; overflow: hidden; 
+	width:40vw; height: 20vw;
+	border: 4px grey solid;
+	bottom: 0; right: 0;
+	padding: 0 0;
+	filter: brightness(90%);
+}
+	
+::selection 
+{
+  background: transparent;
+}

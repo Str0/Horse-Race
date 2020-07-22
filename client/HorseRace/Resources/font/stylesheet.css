@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'GTAVFont4';
+    src: url('Font4.woff2') format('woff2'),
+        url('Font4.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTAVFont1';
+    src: url('Font1.woff2') format('woff2'),
+        url('Font1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

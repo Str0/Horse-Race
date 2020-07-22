@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+@font-face {
+	font-family: 'Josefin Sans', sans-serif;
+	src: url( '../font/JosefinSans-Regular.ttf' );
+}
+
+html, body {
+	background-color: rgba(0,0,0,0);
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Fix for font spacing */
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6,
+.uk-button, .uk-input {
+	padding-top: 0.2em;
+}
+
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.uk-h1, h1 {
+	text-transform: uppercase !important;
+	line-height: 1;
+}
+
+.uk-button-primary {
+	background: rgb(255,192,0);
+	transition: box-shadow .2s;
+}
+
+.uk-button-primary:hover, .uk-button-primary.uk-active, .uk-button-primary:active, .uk-button-primary:focus {
+	background: rgb(242,184,6);
+	box-shadow: 0 0 15px 0 rgba(242,184,6,.5);
+}
+.uk-button-primary:focus {
+	box-shadow: none;
+}
+
+.uk-button-default {
+	background: rgba(255,255,255,0);
+	border: 1px solid rgb(255,192,0);
+	color: rgb(255,192,0);
+}
+
+.uk-button-default:hover, .uk-button-default.uk-active, .uk-button-default:active, .uk-button-default:focus {
+	background: rgb(255,192,0);
+	color: white;
+	border: 1px solid rgb(255,192,0);
+}
+
+.uk-border-radius, .uk-button {
+	/* border-radius: 20px; */
+}
+
+.uk-button-large {
+	/* border-radius: 30px; */
+	font-size: 1.2em !important;
+}
+
+.uk-button {
+	text-transform: none;
+	font-size: 1.1em;
+
+}
+
+.uk-button-small {
+	font-size: 1em !important;
+}
+
+.uk-input {
+	/* border-radius: 10px; */
+}
+
+.uk-checkbox {
+	border-radius: 0px;
+}
+
+.uk-checkbox:checked, .uk-checkbox:indeterminate, .uk-radio:checked {
+    background-color: rgb(255,192,0);
+    border-color: transparent;
+}
+
+.uk-checkbox:focus, .uk-radio:focus {
+    border-color: rgb(255,192,0);
+}
+
+.uk-checkbox:checked:focus, .uk-checkbox:indeterminate:focus, .uk-radio:checked:focus {
+    background-color: rgb(255,192,0);
+}
+
+.uk-checkbox:disabled:checked {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23fff%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+.uk-link, a {
+    color: rgb(255,192,0);
+	transition: color .2s;
+}
+
+.uk-link:hover, a:hover {
+    color: rgb(242,184,6);
+}
+
+.uk-icon-button {
+	box-sizing: border-box;
+	width: auto;
+	height: auto;
+	border-radius: 0px;
+	background: rgba(57,57,57,0);
+	color: rgb(242,184,6);
+	vertical-align: middle;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: .1s ease-in-out;
+	    transition-property: all;
+	transition-property: color,background-color;
+}
+.uk-icon-button:focus, .uk-icon-button:hover {
+	background-color: rgba(242,184,6,.2);
+	color: rgb(242,184,6);
+	outline: 0;
+}
+
+.uk-icon-link:not( .uk-conserve-color ) {
+	color: rgb(242,184,6);
+}
+
+.uk-icon-link:focus, .uk-icon-link:hover {
+	color: rgb(255,192,0);
+}
+
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+    outline: 0;
+    background-color: #fff;
+    color: #666;
+    border-color: rgb(255,192,0);
+}
+
+.uk-section-primary {
+	background: rgb(255,192,0);
+}
+
+.uk-section-secondary {
+    background: #393939;
+}
+
+.uk-text-primary {
+	color: rgb(255,192,0) !important;
+}
+
+.tm-border-bottom {
+	border-bottom: 15px solid rgb(255,192,0);
+}
+
+div.ui-slider .ui-slider-handle:focus {
+	outline: none;
+}
+
+div.ui-slider .ui-slider-handle {
+	height: 15px;
+	width: 15px;
+	border-radius: 500px;
+	background: #fff;
+	border: 2px solid rgb(255,192,0);
+	top: -7.5px;
+	margin-left: -7.5px;
+}
+
+div.ui-slider-horizontal {
+	height: 3px;
+	background: #ebebeb;
+	border-radius: 500px;
+	border: none !important;
+}
+
+/* .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid rgb(255,192,0);
+    background: rgb(255,192,0);
+    font-weight: normal;
+    color: #fff;
+	border-radius: 10px;
+}
+
+.ui-widget-content .ui-state-default:hover {
+	border: 1px solid rgb(242,184,6);
+	background: rgb(242,184,6);
+} */
+
+.tm-stroke {
+	-webkit-text-stroke: 1px rgba(0,0,0,.5);
+	text-shadow: 0px 0px 3px rgba(0,0,0,.5);
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 2550px) {
+	html {
+		-moz-transform: scale(1.33, 1.33);
+		zoom: 1.33;
+	}
+}
+
+@media only screen and (min-width: 3830px) {
+	html {
+		-moz-transform: scale(2, 2);
+		zoom: 2;
+	}
+}

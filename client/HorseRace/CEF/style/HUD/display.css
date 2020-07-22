@@ -1,0 +1,84 @@
+.displayContainer 
+{
+	position: absolute;
+	background: rgba(0, 0, 0, .7);
+	border: 1px white solid;
+	z-index: 96;
+}
+
+.line 
+{
+	position: absolute;
+	background: white;
+	z-index: 98;
+}
+
+.point 
+{
+	position: absolute;
+	z-index: 98;
+	background: url("../file/image/tiles/flag.jpg");
+	background-size: 100% 100%;
+	background: white;
+	border-radius: 100%;
+}
+
+.dashed 
+{
+	position: absolute;
+	z-index: 98;
+	background: url("../file/image/tiles/flag.jpg");
+	background-size: 100% 100%;
+	background: white;
+}
+
+.horseIcon 
+{
+	position: absolute;
+	filter: grayscale(100%);
+	z-index: 99;
+}
+
+.rotateHorseIcon {
+	animation: rotateHorseAnim 1s ease-in-out infinite alternate both;
+}
+
+.closeButton 
+{
+	position: absolute;
+	background: rgba(200, 0, 0, 1); 
+	border: solid 1px black;
+	border-radius: 50%;
+	color: white;
+
+	z-index: 200;
+	text-align: center;
+	vertical-align: center;
+	transition-duration: 0.25s;
+	transition-property: color, background-color;
+	backface-visibility: hidden;
+}
+
+.closeButton:hover, .closeButton:focus, .closeButton:active {
+  animation-name: back-pulse;
+  animation-duration: 0.5s;
+  animation-delay: 0.25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+@keyframes back-pulse {
+  50% {
+    background-color:  rgba(200, 0, 0, 1);;
+  }
+}
+
+@keyframes rotateHorseAnim {
+  0% {
+        transform: rotate(-20deg);
+  }
+  100% {
+    	transform: rotate(10deg);
+  }
+}

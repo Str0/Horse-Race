@@ -1,0 +1,11 @@
+<meta>
+    <info name="HorseRace" description="Horse Race System" type="script" />
+
+    
+    <script src="src/Constants.cs" />  
+    <script src="src/classes/TimerHandler.cs" /> 
+    <script src="src/classes/Core.cs" /> 
+    <script src="src/classes/HorseRaceManager.cs" /> 
+    <script src="src/classes/HorseRace.cs" />
+    <script src="src/classes/HorseDiceRoller.cs" />  
+</meta>

@@ -1,0 +1,107 @@
+@font-face { font-family: "medium";
+             src: url("../../file/font/KeepCalm-Medium.ttf");
+}
+
+.postScreen 
+{
+	position: absolute;
+	background-color: #146d14;
+	margin: 0; 
+	padding: 0;
+	z-index: 100;
+	animation: fadeIn 1s ease-in-out 1 forwards;
+	filter: contrast(90%);
+}
+
+.rankRow
+{
+	font-family: "medium"; 
+	position: absolute;
+	z-index: 101;  
+	text-align: center;
+	background: rgba(255,255,0, 0.8);
+	border: 1px black solid;
+	font-weight: 500;
+}
+
+.rankText
+{
+	margin: 0; 
+	padding: 0;
+}
+
+
+.infoText
+{
+	font-family: "medium"; 
+	position: absolute; 
+	margin: 0; 
+	padding: 0;
+	color: black; 
+	
+	text-align: center;
+	
+}
+
+.infoBackground
+{
+	position: absolute;
+	background: rgba(255,255,0, 0.8);
+	border-top: 1px black solid;
+	border-bottom: 1px black solid;
+}
+
+.glowRed
+{
+	text-shadow: 1px 1px 10px red;
+}
+
+.glowGreen
+{
+	text-shadow: 1px 1px 10px green;
+}
+
+.glowBlue
+{
+	text-shadow: 1px 1px 10px blue;
+}
+
+.glowGold
+{
+	text-shadow: 1px 1px 10px gold;
+}
+
+.glowPurple
+{
+	text-shadow: 1px 1px 10px purple;
+}
+
+.glowBlack
+{
+	text-shadow: 1px 1px 10px black;
+}
+
+
+@keyframes fadeIn 
+{
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut
+{
+    0% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
