@@ -51,6 +51,15 @@ namespace HorseRacing
 			player.SetData("HorseRace:Lobby", id);
 		}
 
+	
+		[Command("mm")]
+		public void cmd_mm(Player player, int id)
+		{
+			player.SendChatMessage(@"lel
+
+			leelel");
+		}
+
 		[Command("quit")]
 		public void CMD_quitBusiness(Player player, int id)
 		{

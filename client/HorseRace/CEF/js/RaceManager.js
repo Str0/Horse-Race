@@ -9,16 +9,16 @@ class RaceManager
 		this.horses = []
 
 		this.getTrack().tuneOut()
+		this.getTrack().setupScene() 
+		
+		for(let i = 1; i < 7; i++)
+			this.horses.push(new Horse(this, i))
+		this.setupPosition()
+		
 		setTimeout(function() 
 		{
 			this.getTrack().tuneIn()
 			
-			setTimeout(function() { 
-					this.getTrack().setupScene() 
-					for(let i = 1; i < 7; i++)
-						this.horses.push(new Horse(this, i))
-					this.setupPosition()
-			}.bind(this), 300)
 
 		}.bind(this), 1000)
 	}
@@ -71,7 +71,7 @@ class RaceManager
 		}
 	}
 
-	update(stage, progress, data, length) 
+	update(stage, progress, data, length, instant) 
 	{
 		if (this.getStage() !== stage)
 			this.setStage(stage)
@@ -85,12 +85,24 @@ class RaceManager
 					this.getDisplay().setIconProgress(progress)
 			}
 
-			this.getHorses().forEach(element => {
-				if (data[element.getNumber()-1])
-				{
-					element.moveTo(data[element.getNumber()-1], length)
-				}
-			})
+			if (!instant)
+			{
+				this.getHorses().forEach(element => {
+					if (data[element.getNumber()-1])
+					{
+						element.moveTo(data[element.getNumber()-1], length)
+					}
+				})
+			}
+			else 
+			{
+				this.getHorses().forEach(element => {
+					if (data[element.getNumber()-1])
+					{
+						element.setPosition(element.getParent().width() * (data[element.getNumber()-1] / 100), element.getY())
+					}
+				})
+			}
 		}
 
 		if (stage == STAGE_POST_RACE)

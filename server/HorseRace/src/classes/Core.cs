@@ -13,9 +13,8 @@ namespace HorseRacing
 		[ServerEvent(Event.ResourceStart)]
 		public void OnResourceStart()
 		{
-			NAPI.Server.SetDefaultSpawnLocation(new Vector3(275.446, -1361.11, 24.5378));
+			//NAPI.Server.SetDefaultSpawnLocation(new Vector3(275.446, -1361.11, 24.5378));
 			new HorseRaceManager();
 		}
-
 	}
 }

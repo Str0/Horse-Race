@@ -1,19 +1,21 @@
 let CEF_RACE = null
 let CEF_PANEL = null
 let LAST_SYNC_RACE_PACKET = null
+let LAST_SYNC_RACE_BOOL_FIRST = null
 let LAST_SYNC_PANEL_PACKET = null
 let LAST_SYNC_PANEL_PACKET_STATE = null 
 
-mp.events.add("HorseRace:syncClient", (data) => 
+mp.events.add("HorseRace:syncClient", (data, firstSync) => 
 {
 	if (typeof data == "string")
 	{
 		LAST_SYNC_RACE_PACKET = data
+		LAST_SYNC_RACE_BOOL_FIRST = firstSync
 		if (!mp.objects.exists(CEF_RACE))
 		{
 			return setupCEF("Main")
 		}
-		CEF_RACE.execute(`getEventInterface().Event_onSync(${data})`)
+		CEF_RACE.execute(`getEventInterface().Event_onSync(${data}, ${firstSync})`)
 	}
 })
 
@@ -65,9 +67,9 @@ mp.events.add('browserDomReady', (browser) => {
 	if (browser == CEF_RACE)
 	{
 		if (LAST_SYNC_RACE_PACKET)
-			CEF_RACE.execute(`getEventInterface().Event_onSync(${LAST_SYNC_RACE_PACKET})`)
+			CEF_RACE.execute(`getEventInterface().Event_onSync(${LAST_SYNC_RACE_PACKET}, ${LAST_SYNC_RACE_BOOL_FIRST})`)
 	}
-	else 
+	else if (browser == CEF_PANEL)
 	{
 		if (LAST_SYNC_PANEL_PACKET)
 			CEF_PANEL.execute('Event_onUpdate("' + LAST_SYNC_PANEL_PACKET  + '", ' + LAST_SYNC_PANEL_PACKET_STATE.toString() + ' )')
@@ -105,6 +107,6 @@ function setupCEF(browserType)
 {
 	if(browserType === "Main")
 		CEF_RACE = mp.browsers.new('package://HorseRace/CEF/index.html')
-	else 
+	else
 		CEF_PANEL = mp.browsers.new('package://HorseRace/CEF/panel.html')
 }

@@ -5,7 +5,7 @@ class EventInterface
 		this.core = core
 	}
 
-	Event_onSync(data)
+	Event_onSync(data, instant)
 	{
 		if (data)
 		{
@@ -19,7 +19,7 @@ class EventInterface
 			let length = parseInt(data.Length)
 
 			if (typeof stage == "number" && typeof position == "object")
-				this.getRaceManager().update(stage, progress, position, length)
+				this.getRaceManager().update(stage, progress, position, length, instant)
 		}
 	}
 

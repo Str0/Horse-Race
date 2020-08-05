@@ -103,9 +103,9 @@ namespace HorseRacing
 				this.stop(client);
 		}
 
-		public void sync(GTANetworkAPI.Player client)
+		public void sync(GTANetworkAPI.Player client, bool isFirstSync = false)
 		{
-			client.TriggerEvent("HorseRace:syncClient", this.roll.json);
+			client.TriggerEvent("HorseRace:syncClient", this.roll.json, isFirstSync);
 		}
 
 		public void stop(GTANetworkAPI.Player client)
@@ -119,7 +119,7 @@ namespace HorseRacing
 			{
 				NAPI.Notification.SendNotificationToPlayer(client, "~g~[Horse-Race]~s~ You are now watching Broadcast #" + this.id + "...", false);
 				this.clients.Add(client);
-				this.sync(client);
+				this.sync(client, true);
 			}
 		}
 

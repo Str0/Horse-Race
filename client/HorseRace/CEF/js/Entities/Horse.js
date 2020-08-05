@@ -61,7 +61,7 @@ class Horse
 					if (this.sprint)
 						this.velocity = this.getSpeed() * this.getParent().width();
 					
-					this.setPosition(this.getX() + this.velocity)
+					this.setPosition(this.getX() + this.velocity, this.getY())
 				}
 			}
 			else
@@ -71,7 +71,7 @@ class Horse
 					if (this.sprint)
 						this.velocity = this.getSpeed() * this.getParent().width();
 
-					this.setPosition(this.getX() - this.velocity)
+					this.setPosition(this.getX() - this.velocity, this.getY())
 				}
 			}
 		
